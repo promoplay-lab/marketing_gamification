@@ -223,7 +223,7 @@ var EngineLoader = {
     wasmjs_pthread_sha1: "",
     wasmjs_pthread_size: 250000,
     asmjs_sha1: "",
-    asmjs_size: 4000000,
+    asmjs_size: 4125441,
     wasm_instantiate_progress: 0,
 
     stream_wasm: "true" === "true",
@@ -1269,9 +1269,9 @@ Module["locateFile"] = function(path, scriptDirectory)
     // we need to replace it here with the correct project name.
     if (path == "dmengine.wasm" || path == "dmengine_release.wasm" || path == "dmengine_headless.wasm") {
         if (Module['isWASMPthreadSupported']) {
-            path = "prilipaly_pthread.wasm";
+            path = "demo_game_pthread.wasm";
         } else {
-            path = "prilipaly.wasm";
+            path = "demo_game.wasm";
         }
     }
     return scriptDirectory + path;

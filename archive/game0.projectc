@@ -1,15 +1,15 @@
 []
 
 [project]
-title = prilipaly
-version = 1.0
+title = demo_game
+version = 1.0.2
 publisher = 
 developer = 
 write_log = 0
 write_log_file = 0
 minimum_log_level = 1
 compress_archive = 1
-title_as_file_name = prilipaly
+title_as_file_name = demo_game
 
 [display]
 width = 720
@@ -54,9 +54,9 @@ velocity_threshold = 0.0
 max_fixed_timesteps = 2
 
 [box2d]
-velocity_iterations = 10
-position_iterations = 10
-sub_step_count = 4
+velocity_iterations = 0
+position_iterations = 0
+sub_step_count = 0
 
 [bootstrap]
 main_collection = /main/main.collectionc
@@ -82,11 +82,11 @@ output_spirv = 0
 [sound]
 gain = 1
 use_linear_gain = 1
-max_sound_data = 128
-max_sound_buffers = 32
-max_sound_sources = 16
-max_sound_instances = 256
-max_component_count = 32
+max_sound_data = 8
+max_sound_buffers = 8
+max_sound_sources = 8
+max_sound_instances = 8
+max_component_count = 8
 sample_frame_count = 0
 use_thread = 1
 stream_enabled = 0
@@ -119,17 +119,17 @@ max_bone_matrix_texture_height = 0
 max_count = 0
 
 [gui]
-max_count = 64
+max_count = 4
 max_animation_count = 1024
 max_particle_count = 1024
 max_particlefx_count = 64
 
 [collection]
-max_instances = 1024
+max_instances = 6
 max_input_stack_entries = 16
 
 [collection_proxy]
-max_count = 8
+max_count = 4
 
 [collectionfactory]
 max_count = 0
@@ -180,7 +180,7 @@ custom_heap_size = 0
 heap_size = 32
 htmlfile = /game.html
 cssfile = /game.css
-splash_image = /assets/img/loading.png
+splash_image = /assets/img/PPL_logo.png
 archive_location_prefix = archive
 archive_location_suffix = 
 engine_arguments = --verify-graphics-calls=false
@@ -192,10 +192,10 @@ scale_mode = stretch
 transparent_graphics_context = 0
 
 [particle_fx]
-max_particle_count = 1024
-max_particle_buffer_count = 1024
-max_count = 64
-max_emitter_count = 64
+max_particle_count = 512
+max_particle_buffer_count = 512
+max_count = 32
+max_emitter_count = 32
 
 [network]
 http_timeout = 0

@@ -7,7 +7,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<title>prilipaly 1.0</title>
+	<title>demo_game 1.0.2</title>
 	<style type='text/css'>
 	/* Disable user selection to avoid strange bug in Chrome on Windows:
 	* Selecting a text outside the canvas, then clicking+draging would
@@ -67,18 +67,18 @@
 		.canvas-app-progress {
 		position: absolute;
 		background-color: #394046;
-		height: 6px;
-		margin-top: -6px;
+		height: 18px;
+		bottom: 3%;
 		width: 100%;
 	}
 
 	.canvas-app-progress-bar {
 		font-size: 12px;
-		height: 6px;
+		height: 18px;
 		color: rgb(255, 255, 255);
-		background-color: #1a72eb;
+		background-color: #00D9C0;
 		text-align: center;
-		line-height: 20px;
+		line-height: 18px;
 		transition: transform 1s ease;
 		transform-origin: left;
 		transform: scaleX(1.0);
@@ -118,8 +118,16 @@
 	.canvas-app-canvas {
 		background-repeat:no-repeat;
 		background-position: center center;
-		background-size: contain;
-		background-image: url("loading.png");
+		/* Фиксированный размер 360x360 (70% от оригинала 512px), адаптируется на маленьких экранах */
+		background-size: 360px 360px;
+		background-image: url("PPL_logo.png");
+	}
+
+	/* На маленьких экранах (меньше 360px) - 70% от размера контейнера */
+	@media (max-width: 360px), (max-height: 360px) {
+		.canvas-app-canvas {
+			background-size: 70%;
+		}
 	}
 	</style>
 </head>
@@ -162,7 +170,7 @@
 			runningFromFileWarning.style.display = "block";
 		}
 		else {
-			EngineLoader.load("canvas", "prilipaly");
+			EngineLoader.load("canvas", "demo_game");
 			runningFromFileWarning.parentNode.removeChild(runningFromFileWarning);
 		}
 	</script>
