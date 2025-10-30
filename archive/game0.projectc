@@ -2,7 +2,7 @@
 
 [project]
 title = demo_game
-version = 1.0.6
+version = 1.0.7
 publisher = 
 developer = 
 write_log = 0
@@ -237,4 +237,7 @@ max_time_step = 0.033333
 
 [native_extension]
 app_manifest = /game.appmanifest
+
+[yametrica]
+counter_id = 104960298
 
